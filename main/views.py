@@ -30,7 +30,7 @@ def sales_by_car(request, car_id):
         # получите авто и его продажи
         template_name = 'main/sales.html'
         car = Car.objects.get(id = car_id)
-        sales = Sale.objects.filter(car = car_id) 
+        sales = Sale.objects.filter(car = car) 
         context ={'car':car,
                   'sales':sales 
         }
